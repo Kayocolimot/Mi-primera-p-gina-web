@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mi Primera Página Web</title>
+    <title>Adivina el número</title>
 </head>
 <body>
 
-  <h1>Kayoprueba </h1>
-  <p>Esta es mi primera página web, hecha con la ayuda de Git y GitHub.</p>
- <button id="comprarBoton">Comprar ahora</button>
+    <h1>Adivina el número</h1>
+    <p>Estoy pensando en un número del 1 al 10. ¿Cuál crees que es?</p>
 
-  <script>
-  let boton = document.getElementById("comprarBoton");
+    <input type="number" id="numeroUsuario">
+    <button id="adivinarBoton">Adivinar</button>
 
-  boton.onclick = function() {
-    alert("¡Compra realizada con éxito!");
-  };
-</script>
-<script>
-  window.onload = function() {
-    alert("¡Hola, mundo!");
-  };
-</script>
+    <p id="resultado"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
   
 </body>
 </html>
