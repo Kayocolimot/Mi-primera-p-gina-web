@@ -1,25 +1,16 @@
-let numeroSecreto = Math.floor(Math.random() * 10) + 1;
-let adivinarBoton = document.getElementById("adivinarBoton");
-let numeroUsuario = document.getElementById("numeroUsuario");
-let resultado = document.getElementById("resultado");
+let calcularBoton = document.getElementById("calcularBoton");
+let pesoInput = document.getElementById("peso");
+let alturaInput = document.getElementById("altura");
+let resultadoParrafo = document.getElementById("resultado");
 
-// Nuevas variables
-let intentosRestantes = document.getElementById("intentosRestantes");
-let intentos = 3; // El jugador tendrá 3 intentos
+calcularBoton.onclick = function() {
+  let peso = pesoInput.value;
+  let altura = alturaInput.value;
 
-adivinarBoton.onclick = function() {
-    intentos--; // Resta 1 a los intentos
-
-    let intento = numeroUsuario.value;
-    if (intento == numeroSecreto) {
-        resultado.textContent = "¡Felicitaciones! ¡Adivinaste el número!";
-        intentosRestantes.textContent = "";
-    } else {
-        if (intentos > 0) {
-            resultado.textContent = `Lo siento, ese no es el número. Te quedan ${intentos} intentos.`;
-        } else {
-            resultado.textContent = `¡Se acabaron los intentos! El número era ${numeroSecreto}.`;
-            adivinarBoton.disabled = true;
-        }
-    }
+  if (peso > 0 && altura > 0) {
+    let imc = peso / (altura * altura);
+    resultadoParrafo.textContent = "Tu IMC es: " + imc.toFixed(2);
+  } else {
+    resultadoParrafo.textContent = "Por favor, ingresa valores válidos.";
+  }
 };
