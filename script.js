@@ -23,4 +23,3 @@ adivinarBoton.onclick = function() {
         }
     }
 };
-};
