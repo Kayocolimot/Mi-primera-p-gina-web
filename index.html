@@ -5,9 +5,17 @@
 </head>
 <body>
 
-  <h1>Kayo</h1>
+  <h1>Kayoprueba </h1>
   <p>Esta es mi primera página web, hecha con la ayuda de Git y GitHub.</p>
-  
+ <button id="comprarBoton">Comprar ahora</button>
+
+  <script>
+  let boton = document.getElementById("comprarBoton");
+
+  boton.onclick = function() {
+    alert("¡Compra realizada con éxito!");
+  };
+</script>
 <script>
   window.onload = function() {
     alert("¡Hola, mundo!");
