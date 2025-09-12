@@ -1,16 +1,21 @@
+let cantidadInput = document.getElementById("cantidad");
+let interesInput = document.getElementById("interes");
+let tiempoInput = document.getElementById("tiempo");
 let calcularBoton = document.getElementById("calcularBoton");
-let pesoInput = document.getElementById("peso");
-let alturaInput = document.getElementById("altura");
 let resultadoParrafo = document.getElementById("resultado");
 
 calcularBoton.onclick = function() {
-  let peso = pesoInput.value;
-  let altura = alturaInput.value;
+  let cantidad = parseFloat(cantidadInput.value);
+  let interes = parseFloat(interesInput.value) / 100;
+  let tiempo = parseFloat(tiempoInput.value);
 
-  if (peso > 0 && altura > 0) {
-    let imc = peso / (altura * altura);
-    resultadoParrafo.textContent = "Tu IMC es: " + imc.toFixed(2);
-  } else {
+  // Fórmula de interés compuesto:
+  // Valor Futuro = Cantidad inicial * (1 + tasa de interés)^tiempo
+  let valorFuturo = cantidad * Math.pow((1 + interes), tiempo);
+
+  if (isNaN(valorFuturo)) {
     resultadoParrafo.textContent = "Por favor, ingresa valores válidos.";
+  } else {
+    resultadoParrafo.textContent = `Tu inversión crecerá a $${valorFuturo.toFixed(2)}`
   }
 };
