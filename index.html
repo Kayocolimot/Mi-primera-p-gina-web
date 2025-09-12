@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>Simulador de Inversión</title>
+    <title>Aplicación del Clima</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Simulador de Inversión Simple</h1>
-        <p>Calcula el valor futuro de tu inversión.</p>
-    
-        <label for="cantidad">Cantidad inicial ($):</label>
-        <input type="number" id="cantidad" value="1000">
-    
-        <br><br>
-    
-        <label for="interes">Tasa de interés anual (%):</label>
-        <input type="number" id="interes" value="5">
-    
-        <br><br>
-    
-        <label for="tiempo">Tiempo (en años):</label>
-        <input type="number" id="tiempo" value="10">
-    
-        <br><br>
-    
-        <button id="calcularBoton">Calcular</button>
-    
-        <br><br>
-    
-        <p id="resultado"></p>
+
+    <h1>Consulta el Clima</h1>
+
+    <div class="weather-container">
+        <label for="city">Ciudad:</label>
+        <input type="text" id="city" placeholder="Ej. Ciudad de México">
+        <button id="getWeatherButton">Obtener Clima</button>
+
+        <div id="weather-result">
+            <h2 id="cityName"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+        </div>
     </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
