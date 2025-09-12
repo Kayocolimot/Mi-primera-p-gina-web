@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Calculadora de IMC</title>
+    <meta charset="UTF-8">
+    <title>Simulador de Inversión</title>
 </head>
 <body>
 
-    <h1>Calculadora de IMC</h1>
-    <p>Ingresa tus datos para calcular tu Índice de Masa Corporal.</p>
+    <h1>Simulador de Inversión Simple</h1>
+    <p>Calcula el valor futuro de tu inversión.</p>
 
-    <label for="peso">Peso (en kg):</label>
-    <input type="number" id="peso">
-
-    <br><br>
-
-    <label for="altura">Altura (en metros):</label>
-    <input type="number" id="altura">
+    <label for="cantidad">Cantidad inicial ($):</label>
+    <input type="number" id="cantidad" value="1000">
 
     <br><br>
 
-    <button id="calcularBoton">Calcular IMC</button>
+    <label for="interes">Tasa de interés anual (%):</label>
+    <input type="number" id="interes" value="5">
+
+    <br><br>
+
+    <label for="tiempo">Tiempo (en años):</label>
+    <input type="number" id="tiempo" value="10">
+
+    <br><br>
+
+    <button id="calcularBoton">Calcular</button>
 
     <br><br>
 
