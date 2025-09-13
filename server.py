@@ -10,7 +10,7 @@ API_KEY = "c4ccb2d40ebe51a4316672a63b9a3553"
 
 @app.route('/weather', methods=['GET'])
 def get_weather():
-    city = request.args.get('city')
+   city = request.args.get('city')
     if not city:
         return jsonify({"error": "Falta el nombre de la ciudad"}), 400
 
