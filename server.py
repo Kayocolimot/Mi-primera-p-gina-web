@@ -1,14 +1,16 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+CORS(app)  # Esto permite que tu frontend se comunique con el backend
 
 # Reemplaza 'TU_API_KEY' con una clave de API de clima.
 # Puedes obtener una gratuita en OpenWeatherMap.
 # Visita https://openweathermap.org/api
-API_KEY = "c4ccb2d40ebe51a4316672a63b9a3553"
+API_KEY = "TU_API_KEY"
 
-@app.route('/weather')
+@app.route('/weather', methods=['GET'])
 def get_weather():
     city = request.args.get('city')
     if not city:
